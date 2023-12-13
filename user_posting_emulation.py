@@ -73,11 +73,14 @@ def run_infinite_post_data_loop():
     ]
 })
 
-                response = requests.request("POST", pin_url, headers=headers, data=json.dumps(pin_payload))
-
-                print(response.status_code)
-                print(f"Response Headers: {response.headers}")
-                print(f'Response Content: {response.text}')
+                response = requests.request(method="POST", url=pin_url, headers=headers, data=pin_payload)
+                if 400 <= response.status_code < 600:
+                    print(response.status_code)
+                    print(f"Response Headers: {response.headers}")
+                    print(f'Response Content: {response.text}')
+                else:
+                    #Optionally, print a success message or the status code for successful requests
+                    print(f"Request successful with status code: {response.status_code}")
 
             geo_string = text(f"SELECT * FROM geolocation_data LIMIT {random_row}, 1")
             geo_selected_row = connection.execute(geo_string)
@@ -98,8 +101,15 @@ def run_infinite_post_data_loop():
         }
     ]
 })
-                response = requests.request("POST", geo_url, headers=headers, data=json.dumps(geo_payload))
-                print(response.status_code)
+                response = requests.request(method="POST", url=geo_url, headers=headers, data=geo_payload)
+
+                if 400 <= response.status_code < 600:
+                    print(response.status_code)
+                    print(f"Response Headers: {response.headers}")
+                    print(f'Response Content: {response.text}')
+                else:
+                    #Optionally, print a success message or the status code for successful requests
+                    print(f"Request successful with status code: {response.status_code}")
 
             user_string = text(f"SELECT * FROM user_data LIMIT {random_row}, 1")
             user_selected_row = connection.execute(user_string)
@@ -120,8 +130,14 @@ def run_infinite_post_data_loop():
     ]
 })
                 user_url = 'https://fbjbyb6q42.execute-api.us-east-1.amazonaws.com/Test/topics/126dc60b95b3.user'
-                response = requests.request("POST", user_url, headers=headers, data=json.dumps(user_payload))
-                print(response.status_code)
+                response = requests.request(method="POST", url=user_url, headers=headers, data=user_payload)
+                if 400 <= response.status_code < 600:
+                    print(response.status_code)
+                    print(f"Response Headers: {response.headers}")
+                    print(f'Response Content: {response.text}')
+                else:
+                    #Optionally, print a success message or the status code for successful requests
+                    print(f"Request successful with status code: {response.status_code}")
 
 
 
