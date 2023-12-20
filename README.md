@@ -14,6 +14,7 @@ While producing this Pinterest data pipeline, I have learnt the following insigh
 - **MSK Connect**: Developed competency in setting up custom plugins in MSK Connect for extending functionality.
 - **Configuration Management**: Learned best practices for configuring Kafka clients and connectors to interact with AWS services.
 - **Databricks**: Learned and applied how to mount an s3 bucket onto Databricks.
+
 This project has been a practical platform for applying the above concepts in a cloud environment, simulating real-world data engineering tasks and challenges.
 
 
@@ -35,10 +36,17 @@ This project has been a practical platform for applying the above concepts in a 
 - Successfully send data to the API endpoint by using the invoke URL 
 
 
+### Setting up Databricks
+- Mount the S3 Bucket to Databricks
+- Read through the files to create data tables.
+
+
+
 ### Prerequisites
 - AWS Account
 - Access to AWS Management Console
 - Basic knowledge of Amazon EC2, MSK, and Apache Kafka
+- Access to Databricks 
 
 ### Setting Up the EC2 Instance
 1. Log into the AWS Management Console.
