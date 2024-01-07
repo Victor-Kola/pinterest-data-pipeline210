@@ -72,10 +72,6 @@ This project has been a practical platform for applying the above concepts in a 
 3. Pinterest Streaming Data.ipynb - Databricks notebooks for Pinterest streaming data processing. 
 4. Pinterest Batch Data Pipeline.ipynb - Databricks notebook for Pinterest batch data processing.
 5. 126dc60b95b3_dag.py - File required for databricks-airflow setup. 
-
-
-
-
-
+6. Cloud Pinterest Pipeline.pdf - File showing diagram of architecture.
 
 
